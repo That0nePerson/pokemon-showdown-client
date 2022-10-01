@@ -927,7 +927,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 	//
 	// Past gen table
 	//
-
+	/*
 	for (const genNum of [7, 6, 5, 4, 3, 2, 1]) {
 		const gen = 'gen' + genNum;
 		const nextGen = 'gen' + (genNum + 1);
@@ -942,6 +942,8 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			const curEntry = genData.Pokedex[id];
 			const nextEntry = nextGenData.Pokedex[id];
 			for (const key of overrideSpeciesKeys) {
+				console.log("\n");
+				console.log(curEntry[key]);
 				if (JSON.stringify(curEntry[key]) !== JSON.stringify(nextEntry[key])) {
 					if (!overrideSpeciesData[id]) overrideSpeciesData[id] = {};
 					overrideSpeciesData[id][key] = curEntry[key];
@@ -1001,12 +1003,13 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 				overrideTypeChart[id] = curEntry;
 			}
 		}
-	}
+	}*/
 
 	//
 	// Mods
 	//
 
+	/*
 	for (const mod of ['gen7letsgo', 'gen8bdsp']) {
 		const modDex = Dex.mod(mod);
 		const modData = modDex.data;
@@ -1052,7 +1055,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 				}
 			}
 		}
-	}
+	}*/
 
 	buf += `exports.BattleTeambuilderTable = JSON.parse('${JSON.stringify(BattleTeambuilderTable).replace(/['\\]/g, "\\$&")}');\n\n`;
 
